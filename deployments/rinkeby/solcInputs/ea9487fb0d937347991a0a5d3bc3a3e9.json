@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "src/BuyMeACoffee.sol": {
+      "content": "//SPDX-License-Identifier: Unlicense\n\n// contracts/BuyMeACoffee.sol\npragma solidity ^0.8.9;\n\n// Switch this to your own contract address once deployed, for bookkeeping!\n// Example Contract Address on Goerli: 0xDBa03676a2fBb6711CB652beF5B7416A53c1421D\n\ncontract BuyMeACoffee {\n    // Event to emit when a Memo is created.\n    event NewMemo(address indexed from, uint256 timestamp, string name, string message);\n\n    // Memo struct.\n    struct Memo {\n        address from;\n        uint256 timestamp;\n        string name;\n        string message;\n    }\n\n    // Address of contract deployer. Marked payable so that\n    // we can withdraw to this address later.\n    address payable owner;\n\n    // List of all memos received from coffee purchases.\n    Memo[] memos;\n\n    constructor() {\n        // Store the address of the deployer as a payable address.\n        // When we withdraw funds, we'll withdraw here.\n        owner = payable(msg.sender);\n    }\n\n    /**\n     * @dev fetches all stored memos\n     */\n    function getMemos() public view returns (Memo[] memory) {\n        return memos;\n    }\n\n    /**\n     * @dev buy a coffee for owner (sends an ETH tip and leaves a memo)\n     * @param _name name of the coffee purchaser\n     * @param _message a nice message from the purchaser\n     */\n    function buyCoffee(string memory _name, string memory _message) public payable {\n        // Must accept more than 0 ETH for a coffee.\n        require(msg.value > 0, \"can't buy coffee for free!\");\n\n        // Add the memo to storage!\n        memos.push(Memo(msg.sender, block.timestamp, _name, _message));\n\n        // Emit a NewMemo event with details about the memo.\n        emit NewMemo(msg.sender, block.timestamp, _name, _message);\n    }\n\n    /**\n     * @dev send the entire balance stored in this contract to the owner\n     */\n    function withdrawTips() public {\n        require(owner.send(address(this).balance));\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 2000
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

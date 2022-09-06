@@ -67,6 +67,7 @@ async function performAction(rawArgs) {
   const args = rawArgs.slice(1);
   if (firstArg === 'run') {
     const {fixedArgs, extra} = parseArgs(args, 2, {});
+    console.log('fixedArgs', fixedArgs);
     let filepath = fixedArgs[1];
     const folder = path.basename(__dirname);
     if (filepath.startsWith(folder + '/') || filepath.startsWith(folder + '\\')) {

@@ -1,5 +1,9 @@
 # Boilerplate for ethereum solidity smart contract development
 
+## Frontend demo
+
+[https://replit.com/@0xuhe/BuyMeACoffee-Solidity-DeFi-Tipping-app?v=1](https://replit.com/@0xuhe/BuyMeACoffee-Solidity-DeFi-Tipping-app?v=1)
+
 ## INSTALL
 
 ```bash

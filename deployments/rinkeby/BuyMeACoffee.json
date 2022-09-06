@@ -1,0 +1,234 @@
+{
+  "address": "0x0fA51979e5a0f2aa461268E03BDa4F38B3D1d4ea",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "name": "NewMemo",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_message",
+          "type": "string"
+        }
+      ],
+      "name": "buyCoffee",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMemos",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "message",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct BuyMeACoffee.Memo[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdrawTips",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xf89d213a435556d580b2133f73a775ef26b1da6606d60babc0ad8ad2787ce5f3",
+  "receipt": {
+    "to": null,
+    "from": "0xD56Eea652e78ba64cc5b04CF9b15aB11d2c6E82d",
+    "contractAddress": "0x0fA51979e5a0f2aa461268E03BDa4F38B3D1d4ea",
+    "transactionIndex": 13,
+    "gasUsed": "514762",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xa334858579732fb0a4bad389d3e3ef45bd6dcf906e50ef140f9b6c3c02c5ef71",
+    "transactionHash": "0xf89d213a435556d580b2133f73a775ef26b1da6606d60babc0ad8ad2787ce5f3",
+    "logs": [],
+    "blockNumber": 11330651,
+    "cumulativeGasUsed": "17006552",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "ea9487fb0d937347991a0a5d3bc3a3e9",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"}],\"name\":\"NewMemo\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_message\",\"type\":\"string\"}],\"name\":\"buyCoffee\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMemos\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"}],\"internalType\":\"struct BuyMeACoffee.Memo[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawTips\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"buyCoffee(string,string)\":{\"details\":\"buy a coffee for owner (sends an ETH tip and leaves a memo)\",\"params\":{\"_message\":\"a nice message from the purchaser\",\"_name\":\"name of the coffee purchaser\"}},\"getMemos()\":{\"details\":\"fetches all stored memos\"},\"withdrawTips()\":{\"details\":\"send the entire balance stored in this contract to the owner\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/BuyMeACoffee.sol\":\"BuyMeACoffee\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":2000},\"remappings\":[]},\"sources\":{\"src/BuyMeACoffee.sol\":{\"content\":\"//SPDX-License-Identifier: Unlicense\\n\\n// contracts/BuyMeACoffee.sol\\npragma solidity ^0.8.9;\\n\\n// Switch this to your own contract address once deployed, for bookkeeping!\\n// Example Contract Address on Goerli: 0xDBa03676a2fBb6711CB652beF5B7416A53c1421D\\n\\ncontract BuyMeACoffee {\\n    // Event to emit when a Memo is created.\\n    event NewMemo(address indexed from, uint256 timestamp, string name, string message);\\n\\n    // Memo struct.\\n    struct Memo {\\n        address from;\\n        uint256 timestamp;\\n        string name;\\n        string message;\\n    }\\n\\n    // Address of contract deployer. Marked payable so that\\n    // we can withdraw to this address later.\\n    address payable owner;\\n\\n    // List of all memos received from coffee purchases.\\n    Memo[] memos;\\n\\n    constructor() {\\n        // Store the address of the deployer as a payable address.\\n        // When we withdraw funds, we'll withdraw here.\\n        owner = payable(msg.sender);\\n    }\\n\\n    /**\\n     * @dev fetches all stored memos\\n     */\\n    function getMemos() public view returns (Memo[] memory) {\\n        return memos;\\n    }\\n\\n    /**\\n     * @dev buy a coffee for owner (sends an ETH tip and leaves a memo)\\n     * @param _name name of the coffee purchaser\\n     * @param _message a nice message from the purchaser\\n     */\\n    function buyCoffee(string memory _name, string memory _message) public payable {\\n        // Must accept more than 0 ETH for a coffee.\\n        require(msg.value > 0, \\\"can't buy coffee for free!\\\");\\n\\n        // Add the memo to storage!\\n        memos.push(Memo(msg.sender, block.timestamp, _name, _message));\\n\\n        // Emit a NewMemo event with details about the memo.\\n        emit NewMemo(msg.sender, block.timestamp, _name, _message);\\n    }\\n\\n    /**\\n     * @dev send the entire balance stored in this contract to the owner\\n     */\\n    function withdrawTips() public {\\n        require(owner.send(address(this).balance));\\n    }\\n}\\n\",\"keccak256\":\"0x217b55de10aab9740240be504b24e3acd204ecef5205bda801d73c75893e7103\",\"license\":\"Unlicense\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50600080546001600160a01b031916331790556107f7806100326000396000f3fe6080604052600436106100345760003560e01c8063204206e1146100395780633aaa74b21461004e578063865c517214610063575b600080fd5b61004c6100473660046105b7565b61008e565b005b34801561005a57600080fd5b5061004c610271565b34801561006f57600080fd5b506100786102b2565b6040516100859190610668565b60405180910390f35b600034116100fc576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601a60248201527f63616e27742062757920636f6666656520666f72206672656521000000000000604482015260640160405180910390fd5b6040805160808101825233815242602080830191825292820185815260608301859052600180548082018255600091909152835160049091027fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf68101805473ffffffffffffffffffffffffffffffffffffffff939093167fffffffffffffffffffffffff000000000000000000000000000000000000000090931692909217825592517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf784015590518051939491936101fc937fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf801929190910190610462565b5060608201518051610218916003840191602090910190610462565b5050503373ffffffffffffffffffffffffffffffffffffffff167fc56140e05f516509ae28110e0f72e17558a7561630dad2647c3ae87d986e365c42848460405161026593929190610738565b60405180910390a25050565b6000805460405173ffffffffffffffffffffffffffffffffffffffff909116914780156108fc02929091818181858888f193505050506102b057600080fd5b565b60606001805480602002602001604051908101604052809291908181526020016000905b828210156104595760008481526020908190206040805160808101825260048602909201805473ffffffffffffffffffffffffffffffffffffffff168352600181015493830193909352600283018054929392918401916103369061076d565b80601f01602080910402602001604051908101604052809291908181526020018280546103629061076d565b80156103af5780601f10610384576101008083540402835291602001916103af565b820191906000526020600020905b81548152906001019060200180831161039257829003601f168201915b505050505081526020016003820180546103c89061076d565b80601f01602080910402602001604051908101604052809291908181526020018280546103f49061076d565b80156104415780601f1061041657610100808354040283529160200191610441565b820191906000526020600020905b81548152906001019060200180831161042457829003601f168201915b505050505081525050815260200190600101906102d6565b50505050905090565b82805461046e9061076d565b90600052602060002090601f01602090048101928261049057600085556104d6565b82601f106104a957805160ff19168380011785556104d6565b828001600101855582156104d6579182015b828111156104d65782518255916020019190600101906104bb565b506104e29291506104e6565b5090565b5b808211156104e257600081556001016104e7565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b600082601f83011261053b57600080fd5b813567ffffffffffffffff80821115610556576105566104fb565b604051601f8301601f19908116603f0116810190828211818310171561057e5761057e6104fb565b8160405283815286602085880101111561059757600080fd5b836020870160208301376000602085830101528094505050505092915050565b600080604083850312156105ca57600080fd5b823567ffffffffffffffff808211156105e257600080fd5b6105ee8683870161052a565b9350602085013591508082111561060457600080fd5b506106118582860161052a565b9150509250929050565b6000815180845260005b8181101561064157602081850181015186830182015201610625565b81811115610653576000602083870101525b50601f01601f19169290920160200192915050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b8381101561072a577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc08984030185528151608073ffffffffffffffffffffffffffffffffffffffff825116855288820151898601528782015181898701526106f98287018261061b565b91505060608083015192508582038187015250610716818361061b565b96890196945050509086019060010161068f565b509098975050505050505050565b838152606060208201526000610751606083018561061b565b8281036040840152610763818561061b565b9695505050505050565b600181811c9082168061078157607f821691505b602082108114156107bb577f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b5091905056fea26469706673582212204dbf5d03ec969d142eaee22d0798d14bde4c23ae594359350f692badb38ceceb64736f6c63430008090033",
+  "deployedBytecode": "0x6080604052600436106100345760003560e01c8063204206e1146100395780633aaa74b21461004e578063865c517214610063575b600080fd5b61004c6100473660046105b7565b61008e565b005b34801561005a57600080fd5b5061004c610271565b34801561006f57600080fd5b506100786102b2565b6040516100859190610668565b60405180910390f35b600034116100fc576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601a60248201527f63616e27742062757920636f6666656520666f72206672656521000000000000604482015260640160405180910390fd5b6040805160808101825233815242602080830191825292820185815260608301859052600180548082018255600091909152835160049091027fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf68101805473ffffffffffffffffffffffffffffffffffffffff939093167fffffffffffffffffffffffff000000000000000000000000000000000000000090931692909217825592517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf784015590518051939491936101fc937fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf801929190910190610462565b5060608201518051610218916003840191602090910190610462565b5050503373ffffffffffffffffffffffffffffffffffffffff167fc56140e05f516509ae28110e0f72e17558a7561630dad2647c3ae87d986e365c42848460405161026593929190610738565b60405180910390a25050565b6000805460405173ffffffffffffffffffffffffffffffffffffffff909116914780156108fc02929091818181858888f193505050506102b057600080fd5b565b60606001805480602002602001604051908101604052809291908181526020016000905b828210156104595760008481526020908190206040805160808101825260048602909201805473ffffffffffffffffffffffffffffffffffffffff168352600181015493830193909352600283018054929392918401916103369061076d565b80601f01602080910402602001604051908101604052809291908181526020018280546103629061076d565b80156103af5780601f10610384576101008083540402835291602001916103af565b820191906000526020600020905b81548152906001019060200180831161039257829003601f168201915b505050505081526020016003820180546103c89061076d565b80601f01602080910402602001604051908101604052809291908181526020018280546103f49061076d565b80156104415780601f1061041657610100808354040283529160200191610441565b820191906000526020600020905b81548152906001019060200180831161042457829003601f168201915b505050505081525050815260200190600101906102d6565b50505050905090565b82805461046e9061076d565b90600052602060002090601f01602090048101928261049057600085556104d6565b82601f106104a957805160ff19168380011785556104d6565b828001600101855582156104d6579182015b828111156104d65782518255916020019190600101906104bb565b506104e29291506104e6565b5090565b5b808211156104e257600081556001016104e7565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b600082601f83011261053b57600080fd5b813567ffffffffffffffff80821115610556576105566104fb565b604051601f8301601f19908116603f0116810190828211818310171561057e5761057e6104fb565b8160405283815286602085880101111561059757600080fd5b836020870160208301376000602085830101528094505050505092915050565b600080604083850312156105ca57600080fd5b823567ffffffffffffffff808211156105e257600080fd5b6105ee8683870161052a565b9350602085013591508082111561060457600080fd5b506106118582860161052a565b9150509250929050565b6000815180845260005b8181101561064157602081850181015186830182015201610625565b81811115610653576000602083870101525b50601f01601f19169290920160200192915050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b8381101561072a577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc08984030185528151608073ffffffffffffffffffffffffffffffffffffffff825116855288820151898601528782015181898701526106f98287018261061b565b91505060608083015192508582038187015250610716818361061b565b96890196945050509086019060010161068f565b509098975050505050505050565b838152606060208201526000610751606083018561061b565b8281036040840152610763818561061b565b9695505050505050565b600181811c9082168061078157607f821691505b602082108114156107bb577f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b5091905056fea26469706673582212204dbf5d03ec969d142eaee22d0798d14bde4c23ae594359350f692badb38ceceb64736f6c63430008090033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "buyCoffee(string,string)": {
+        "details": "buy a coffee for owner (sends an ETH tip and leaves a memo)",
+        "params": {
+          "_message": "a nice message from the purchaser",
+          "_name": "name of the coffee purchaser"
+        }
+      },
+      "getMemos()": {
+        "details": "fetches all stored memos"
+      },
+      "withdrawTips()": {
+        "details": "send the entire balance stored in this contract to the owner"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 22,
+        "contract": "src/BuyMeACoffee.sol:BuyMeACoffee",
+        "label": "owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address_payable"
+      },
+      {
+        "astId": 26,
+        "contract": "src/BuyMeACoffee.sol:BuyMeACoffee",
+        "label": "memos",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_array(t_struct(Memo)20_storage)dyn_storage"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_address_payable": {
+        "encoding": "inplace",
+        "label": "address payable",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_struct(Memo)20_storage)dyn_storage": {
+        "base": "t_struct(Memo)20_storage",
+        "encoding": "dynamic_array",
+        "label": "struct BuyMeACoffee.Memo[]",
+        "numberOfBytes": "32"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Memo)20_storage": {
+        "encoding": "inplace",
+        "label": "struct BuyMeACoffee.Memo",
+        "members": [
+          {
+            "astId": 13,
+            "contract": "src/BuyMeACoffee.sol:BuyMeACoffee",
+            "label": "from",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 15,
+            "contract": "src/BuyMeACoffee.sol:BuyMeACoffee",
+            "label": "timestamp",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 17,
+            "contract": "src/BuyMeACoffee.sol:BuyMeACoffee",
+            "label": "name",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 19,
+            "contract": "src/BuyMeACoffee.sol:BuyMeACoffee",
+            "label": "message",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_string_storage"
+          }
+        ],
+        "numberOfBytes": "128"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
